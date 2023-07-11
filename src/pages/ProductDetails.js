@@ -1,10 +1,16 @@
 import React from "react";
+import Showcase from "../components/layouts/showcase/Showcase";
+//import SimilarProducts from "../components/layouts/similarproducts/SimilarProducts";
+import Footer from "../components/layouts/footer/Footer";
+import "./productdetails.styles.css";
 
 const ProductDetails = () => {
   return (
-    <div>
-      <h1>Product Details</h1>
-    </div>
+    <section>
+      <Showcase />
+
+      <Footer />
+    </section>
   );
 };
 export default ProductDetails;

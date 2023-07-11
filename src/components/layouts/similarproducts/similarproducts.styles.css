@@ -1,0 +1,43 @@
+.similar-product-listing-container {
+  margin-top: 5%;
+}
+.listing-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+.product-listing-card {
+  border: 1px solid #aaa;
+  width: fit-content;
+  padding-right: 2.8rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+}
+.product-listing-image {
+  width: 200px;
+}
+.product-listing-details-container {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+.pricing {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color-bright);
+}
+.button {
+  display: inline-block;
+  background-color: var(--primary-color-bright);
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+  font-family: chivo mono;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: 0.2s ease-in;
+}
+.button:hover {
+  background-color: black;
+}

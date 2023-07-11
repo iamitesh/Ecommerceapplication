@@ -6,7 +6,7 @@ import axios from "axios";
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sortField, setSortField] = useState("");
+  const [sortField, setSortField] = useState("Sort By");
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const ProductListing = () => {
     };
 
     fetchProducts();
-  }, []);
+  });
 
   if (loading) {
     return <div>Loading...</div>;

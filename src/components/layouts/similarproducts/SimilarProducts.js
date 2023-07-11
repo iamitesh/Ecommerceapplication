@@ -9,11 +9,7 @@ const SimilarProducts = () => {
         <div className="listing-container">
           <div className="product-listing-card">
             <div className="product-listing-image-container">
-              <img
-                src="image link"
-                alt="product-listing-image"
-                className="product-listing-image"
-              />
+              <img alt="product" className="product-listing-image" />
             </div>
             <div className="product-listing-details-container">
               <h3>Title</h3>

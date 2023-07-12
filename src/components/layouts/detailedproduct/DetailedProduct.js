@@ -6,7 +6,7 @@ import axios from "axios";
 
 const DetailedSection = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState([]);
+  const [product, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const DetailedSection = () => {
       const response = await axios.get(
         `https://fakestoreapi.com/products/${id}`
       );
-      setProduct(await response.data);
+      setProducts(response.data);
       setLoading(false);
     };
     getProducts();
@@ -23,14 +23,12 @@ const DetailedSection = () => {
   const Loading = () => {
     return <div>Loading...</div>;
   };
+
   const ShowProduct = () => {
     return (
       <section className="detail-section-container">
         <div className="container">
           <div className="flex-container">
-          {products.length > 0 ? (
-            products.map((product) => (
-            <div>
             <div className="product-img-container">
               <img src={product.image} alt={product.title} />
             </div>
@@ -45,9 +43,6 @@ const DetailedSection = () => {
               <h3>&#8377;{product.price}</h3>
               <button className="button-primary">Add To Cart</button>
             </div>
-            </div>
-            ))
-            )}
           </div>
         </div>
       </section>

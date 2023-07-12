@@ -1,6 +1,5 @@
 import React from "react";
 import "./navbar.styles.css";
-import SearchInputForm from "../../forms/searchInputForm/SearchInputForm";
 import logoimg from "../../../assets/favicon.ico";
 
 const Navbar = () => {
@@ -11,7 +10,6 @@ const Navbar = () => {
           <img src={logoimg} alt="logo"></img>
           Clothing<span className="text-primary">Store</span>
         </a>
-        <SearchInputForm />
         <nav className="nav-links-container">
           <a href="#" className="nav-links">
             Account

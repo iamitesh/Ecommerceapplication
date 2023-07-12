@@ -1,18 +1,22 @@
 .showcase-container {
-  height: 100vh;
+  height: 60vh;
   width: 100%;
   background-image: url("../../../assets/showcase-bg.jpg");
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  padding-top: 100px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.showcase-gap {
+  height: 90px;
 }
 
 .overlay {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
 }
@@ -20,10 +24,24 @@
 .showcase-content {
   width: fit-content;
   z-index: 1;
+  padding-top: 40px;
 }
 .showcase-content h2,
 .showcase-content p {
   color: white;
   text-align: center;
   padding-bottom: 10px;
+}
+
+.search-container {
+  width: 40%;
+  margin: auto;
+  padding-top: 5%;
+  z-index: 1;
+}
+
+.search-container h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+  color: white;
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import Showcase from "../components/layouts/showcase/Showcase";
+import Navbar from "../components/layouts/navbar/Navbar";
+import DetailedProduct from "../components/layouts/detailedproduct/DetailedProduct";
 //import SimilarProducts from "../components/layouts/similarproducts/SimilarProducts";
 import Footer from "../components/layouts/footer/Footer";
 import "./productdetails.styles.css";
@@ -7,8 +8,8 @@ import "./productdetails.styles.css";
 const ProductDetails = () => {
   return (
     <section>
-      <Showcase />
-
+      <Navbar />
+      <DetailedProduct />
       <Footer />
     </section>
   );

@@ -6,7 +6,7 @@ import axios from "axios";
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sortField, setSortField] = useState("Sort By");
+  const [sortField, setSortField] = useState("");
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const ProductListing = () => {
     };
 
     fetchProducts();
-  });
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -41,6 +41,7 @@ const ProductListing = () => {
   return (
     <div className="product-listing-container">
       <div className="container">
+        <h3>Latest Collection</h3>
         <div>
           <select
             value={sortField}
@@ -52,7 +53,6 @@ const ProductListing = () => {
           </select>
         </div>
         <div>
-          <h1>Product Listing Page</h1>
           <div className="product-list">
             {products.length > 0 ? (
               products.map((product) => (

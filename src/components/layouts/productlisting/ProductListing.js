@@ -65,7 +65,7 @@ const ProductListing = () => {
                   <Link to={`/productdetails/${product.id}`}>
                     <img src={product.image} alt={product.title} />
                   </Link>
-                  <div>
+                  <div className="productdetails">
                     <h2>{product.title}</h2>
                     <p>Price: ${product.price}</p>
                     <button className="button">Add to Cart</button>

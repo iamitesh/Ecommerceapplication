@@ -41,7 +41,7 @@
   color: var(--primary-color-bright);
 }
 
-.button {
+.product-detail-container .button {
   display: inline-block;
   background-color: var(--primary-color-bright);
   width: 50%;
@@ -61,7 +61,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .button {
+  .product-detail-container  .button {
     width: 100%;
   }
 }

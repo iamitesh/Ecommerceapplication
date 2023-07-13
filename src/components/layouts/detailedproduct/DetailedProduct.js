@@ -27,22 +27,17 @@ const DetailedSection = () => {
   const ShowProduct = () => {
     return (
       <section className="detail-section-container">
-        <div className="container">
-          <div className="flex-container">
-            <div className="product-img-container">
-              <img src={product.image} alt={product.title} />
-            </div>
-            <div className="product-detail-container">
-              <h4> {product.category}</h4>
-              <h1>{product.title}</h1>
-              <p>
-                Rating : {product.rating && product.rating.rate}
-                <h3>&#10038;</h3>
-              </p>
-              <p className="product-description">{product.description}</p>
-              <h3>&#8377;{product.price}</h3>
-              <button className="button-primary">Add To Cart</button>
-            </div>
+        <div className="flex-container">
+          <div className="product-img-container">
+            <img src={product.image} alt={product.title} />
+          </div>
+          <div className="product-detail-container">
+            <h4> {product.category}</h4>
+            <h1>{product.title}</h1>
+            <p>Rating : {product.rating && product.rating.rate}&#10038;</p>
+            <p className="product-description">{product.description}</p>
+            <h3>&#8377;{product.price}</h3>
+            <button className="button">Add To Cart</button>
           </div>
         </div>
       </section>

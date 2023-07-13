@@ -1,4 +1,5 @@
 .detail-section-container {
+  max-width: 80%;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -38,4 +39,23 @@
   font-size: 1.5rem;
   padding-top: 1rem;
   color: var(--primary-color-bright);
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-color-bright);
+  width: 50%;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+  font-family: chivo mono;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: 0.2s ease-in;
+  border-radius: 10px;
+  border-color: white;
+  font-weight: bolder;
+}
+.button:hover {
+  background-color: black;
 }

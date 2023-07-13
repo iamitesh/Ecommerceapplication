@@ -1,6 +1,7 @@
 import React from "react";
 import "./productlisting.styles.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const ProductListing = () => {
@@ -42,12 +43,16 @@ const ProductListing = () => {
     <div className="product-listing-container">
       <div className="container">
         <h3>Latest Collection</h3>
-        <div>
+        <div className="select-container">
           <select
+            className="select"
             value={sortField}
             onChange={handleSortFieldChange}
             placeholder="Sort by"
           >
+            <option selected disabled value="">
+              Sort By
+            </option>
             <option value="low to high">Low to High</option>
             <option value="high to low">High to Low</option>
           </select>
@@ -57,7 +62,9 @@ const ProductListing = () => {
             {products.length > 0 ? (
               products.map((product) => (
                 <div key={product.id} className="product-card">
-                  <img src={product.image} alt={product.title} />
+                  <Link to={`/productdetails/${product.id}`}>
+                    <img src={product.image} alt={product.title} />
+                  </Link>
                   <div>
                     <h2>{product.title}</h2>
                     <p>Price: ${product.price}</p>

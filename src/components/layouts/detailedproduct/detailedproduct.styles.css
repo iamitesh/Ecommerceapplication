@@ -1,7 +1,7 @@
 .detail-section-container {
   max-width: 80%;
   padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 
 .flex-container {
@@ -58,4 +58,10 @@
 }
 .button:hover {
   background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    width: 100%;
+  }
 }

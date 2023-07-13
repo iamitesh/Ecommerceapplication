@@ -71,3 +71,12 @@
 .button:hover {
   background-color: black;
 }
+
+.select-container {
+  padding: 10px;
+  padding-left: 0;
+}
+
+.select {
+  padding: 10px;
+}

@@ -52,8 +52,8 @@ const ProductListing = () => {
             <option selected disabled value="">
               Sort By
             </option>
-            <option value="desc">Name (Inc)</option>
-            <option value="inc">Name (Dec)</option>
+            <option value="desc">Desc</option>
+            <option value="asc">Asc</option>
           </select>
         </div>
         <div>

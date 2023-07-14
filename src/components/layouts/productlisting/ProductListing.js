@@ -10,21 +10,19 @@ const ProductListing = () => {
   const [sortField, setSortField] = useState("");
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(
-          `https://fakestoreapi.com/products?sort=${sortField}`
-        );
-        setProducts(response.data);
-        setLoading(false);
-      } catch (error) {
-        setError(error.message);
-        setLoading(false);
-      }
-    };
+  const fetchProducts = async (url) => {
+    try {
+      const response = await axios.get(url);
+      setProducts(response.data);
+      setLoading(false);
+    } catch (error) {
+      setError(error.message);
+      setLoading(false);
+    }
+  };
 
-    fetchProducts();
+  useEffect(() => {
+    fetchProducts(`https://fakestoreapi.com/products?sort=${sortField}`);
   }, []);
 
   if (loading) {
@@ -37,6 +35,7 @@ const ProductListing = () => {
 
   const handleSortFieldChange = (event) => {
     setSortField(event.target.value);
+    fetchProducts('https://fakestoreapi.com/products?sort=desc')
   };
 
   return (
@@ -53,8 +52,8 @@ const ProductListing = () => {
             <option selected disabled value="">
               Sort By
             </option>
-            <option value="low to high">Low to High</option>
-            <option value="high to low">High to Low</option>
+            <option value="desc">Name (Inc)</option>
+            <option value="inc">Name (Dec)</option>
           </select>
         </div>
         <div>

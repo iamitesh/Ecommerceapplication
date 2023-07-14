@@ -27,11 +27,10 @@ const SimilarProducts = () => {
     <div className="similar-product-listing-container">
       <h2>Similar Products</h2>
       <div className="listing-container">
-        <div>
           {products.length > 0 ? (
             products.map((product) => (
               <div className="product-listing-card">
-                <div key={product.id} className="grid-item">
+                <div key={product.id} >
                   <div className="product-listing-image-container">
                     <img
                       src={product.image}
@@ -51,7 +50,6 @@ const SimilarProducts = () => {
             <div>No products found.</div>
           )}
         </div>
-      </div>
     </div>
   );
 };
